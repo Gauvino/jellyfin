@@ -14,7 +14,7 @@ RUN apk add curl git zlib zlib-dev autoconf g++ make libpng-dev gifsicle alpine-
  && npm run build:production \
  && mv dist /dist
 
-FROM debian:bookworm-slim as app
+FROM debian:12.5-slim as app
 
 # https://askubuntu.com/questions/972516/debian-frontend-environment-variable
 ARG DEBIAN_FRONTEND="noninteractive"
